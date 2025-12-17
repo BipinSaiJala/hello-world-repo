@@ -5,6 +5,7 @@ on:
       - main
       - "!feature/*"
 
+
 jobs:
   test:
     strategy:
