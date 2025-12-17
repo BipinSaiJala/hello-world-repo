@@ -2,9 +2,8 @@ name: workflow
 on:
   push:
     branches:
-      - master
+      - main
       - "!feature/*"
-
 
 jobs:
   test:
