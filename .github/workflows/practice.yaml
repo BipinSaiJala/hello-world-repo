@@ -1,0 +1,18 @@
+name: workflow
+on:
+  push:
+    branches:
+      - master
+      - "!feature/*"
+
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        images: [nginx]
+    runs-on: ${{ matrix.os }}
+    steps:
+          - name: running on ${{matrix.os}}
+            run: echo "this image ${{matrix.images}}"
